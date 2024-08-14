@@ -27,13 +27,13 @@ public class Ventana extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane2 = new javax.swing.JScrollPane();
+        Especial = new javax.swing.JList<>();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         Tradicional = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        Especial = new javax.swing.JList<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         jList1 = new javax.swing.JList<>();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -49,6 +49,13 @@ public class Ventana extends javax.swing.JFrame {
         jOptionPane3 = new javax.swing.JOptionPane();
         choice3 = new java.awt.Choice();
         jButton1 = new javax.swing.JButton();
+
+        Especial.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Carne a la Llanera", "Langosta Fresca", "Caviar de Esturión", "Beef Stake", "Sashimi de Atún" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane2.setViewportView(Especial);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,15 +87,6 @@ public class Ventana extends javax.swing.JFrame {
 
         Tradicional.setToolTipText("");
         Tradicional.setName("Menú Tradicional"); // NOI18N
-
-        Especial.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Carne a la Llanera", "Langosta Fresca", "Caviar de Esturión", "Beef Stake", "Sashimi de Atún" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        jScrollPane2.setViewportView(Especial);
-
-        jTabbedPane2.addTab("Platos fuertes", jScrollPane2);
 
         jList1.setModel(new javax.swing.AbstractListModel<String>() {
             String[] strings = { "Cerveza Importada", "Jugo de Arándanos", "Agua de Manantial", "Vino Blanco", "Vino Tinto" };
@@ -155,7 +153,7 @@ public class Ventana extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 612, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
@@ -169,7 +167,7 @@ public class Ventana extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         jPanel2.getAccessibleContext().setAccessibleParent(jLabel1);
